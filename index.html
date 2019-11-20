@@ -5,37 +5,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--     <link rel="stylesheet" type="text/css" href="style.css">
+ -->    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+     <script type="text/javascript" src="script.js"></script>
+
+      
+
+
     <title>Document</title>
+
+
+      <style type="text/css">
+    .glow {
+        -webkit-animation-duration: 1s;
+        -webkit-animation-name: glow;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-name: glow;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    
+    }
+    
+    @-webkit-keyframes glow 
+    {
+        from { text-shadow: 0 0 0px #97222B; }
+        to { text-shadow: 0 0 20px #f1c712 ; }
+    }
+  </style>
+  
+
+  
+
+
+
 </head>
-<body>
+
+
+<body onload = "startTimer()">
+     
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Agri Solution</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-              
+                  <div id="google_translate_element"></div>
+
+                <script type="text/javascript">
+
+                function googleTranslateElementInit()
+                {
+                  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+                </script>
+
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                       
-                    <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Questions</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+                    <li class="nav-item"><a class="nav-link" href="question_list.php">Questions</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Unanswered</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ask a question</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ask_question.html">Ask a question</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Buy/Sell</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
                   </ul>
-
                
                
                 </div>
               </nav>
+      <div>
+<!--                  <div style="background-image:url('11.jpg') ;background-size: 100% 100%; height : 650px" > -->
+                  <script type = "text/javascript">
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0: x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          // function displayPreviousImage() {
+          //     x = (x <= 0) ? images.length - 1 : x - 1;
+          //     document.getElementById("img").src = images[x];
+          // } 
+
+          function startTimer()
+          {
+              setInterval(displayNextImage,1500);
+          }
+
+          var images = [], x = 0;
+          images[0] = "images/1.png";
+          images[1] = "images/image-slider-1.jpg";
+          images[2] = "images/image-slider-2.jpg";
+          images[3] = "images/image-slider-3.jpg";
+          images[4] = "images/image-slider-4.jpg";
+          images[5] = "images/image-slider-5.jpg";
+          images[6] = "images/image-slider-6.jpg";
+          images[7] = "images/image-slider-7.jpg";
+          images[8] = "images/image-slider-9.jpg";
+          
+      </script>
+            <img id="img" src="/images/1.png"  style=" width : 100%"/>
                 
+</div>
+              <div style="display: flex;">
+              <div class="weather-container" style="width:300px;">
+                <img class="icon"> 
+                <p class="weather" style="color:black"></p>
+                <p class="temp" style="color:black">Temperature = </p>
+                <p class="pressure" style="color:black">Pressure = </p>
+                <p class="humid" style="color:black">Humid = </p>
+                <p class="desc" style="color:black">Description = </p>
+              </div>
+
+
+
+            <div style="margin-left:auto;">
+
+
+                <div  style="border: 0px solid black; width: 100%; height: auto ;font-size: 40px;background-color: transparent;color:blue;display:inline;"><h1>Goverment Schemes</h1></div>
+
+               
+
+                <div  style="border: 0px solid black; width: 100%; height: auto ;font-size: 40px;background-color: transparent;color:blue"><h3>MINISTRY OF AGRICULTURE & FARMERS WELFARE</h3></div>
+
+
+        <marquee direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();"style="height:200px">
+
+         <li><i class="uk-icon-caret-right"></i><a href="nahep.html" target="_blank"><b style="color:darkgreen" class="glow">National Agricultural Higher Education Project (NAHEP)</b></a></li>
+
+         <li><i class="uk-icon-caret-right"></i><a href="pmfby.html" target="_blank"><b style="color:darkgreen" class="glow">Pradhan Mantri Fasal Bima Yojana</b></a></li>
+
+         <li><i class="uk-icon-caret-right"></i><a href="op.html" target="_blank"><b style="color:darkgreen" class="glow">Online Portal “ENSURE”</b></a></li>
+
+         <li><i class="uk-icon-caret-right"></i><a href="pmaasha.html" target="_blank"><b style="color:darkgreen" class="glow">Pradhan Mantri Annadata Aay SanraksHan Abhiyan (PM-AASHA)</b></a></li>
+
+          <li><i class="uk-icon-caret-right"></i><a href="pmksy.html" target="_blank"><b style="color:darkgreen" class="glow">Pradhan Mantri Krishi Sinchai Yojana (PMKSY)</b></a></li>
+
+          <li><i class="uk-icon-caret-right"></i><a href="pkvy.html" target="_blank"><b style="color:darkgreen" class="glow">Paramparagat Krishi Vikas Yojana (PKVY)</b></a></li>
+
+
+           <li><i class="uk-icon-caret-right"></i><a href="nmsa.html" target="_blank"><b style="color:darkgreen" class="glow">National Mission For Sustainable Agriculture (NMSA)</b></a></li>
+
+           </marquee>
+
+          <div  style="border: 0px solid black; width: 100%; height: auto ;font-size: 40px;background-color: transparent;color:blue"><h3>MINISTRY OF CHEMICAL AND FERTILIZERS</h3></div>
+            <li><i class="uk-icon-caret-right"></i><a href="pmbjp.html" target="_blank"><b style="color:darkgreen" class="glow">Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)</b></a></li>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               <!--  <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="nahep.html">National Agricultural Higher Education Project (NAHEP)</a></div> -->
+                <!--  <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="pmfby.html">Pradhan Mantri Fasal Bima Yojana</a></div> -->
+                  <!-- <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="op.html">Online Portal “ENSURE”</a></div> -->
+                <!--  <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="pmaasha.html">Pradhan Mantri Annadata Aay SanraksHan Abhiyan (PM-AASHA)</a></div> -->
+                <!--  <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="pmksy.html">Pradhan Mantri Krishi Sinchai Yojana (PMKSY)</a></div> -->
+             <!--     <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="pkvy.html">Paramparagat Krishi Vikas Yojana (PKVY)</a></div> -->
+<!-- 
+                 <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="nmsa.html">National Mission For Sustainable Agriculture (NMSA)</a></div> -->
+
+
+
+                 
+               <!--  <div style="border: 0px solid black; width: 100%; height: auto ;font-size: 20px;background-color: transparent;color:blue"><a href="pmbjp.html">Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)</a></div>
+              </div> -->
+
+        </div>
+                <!-- <div ></div> -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </body>
+
+
+
+
+
+
 </html>

@@ -12,7 +12,7 @@ $.getJSON(
 	var humid = data.main.humidity;
 	var pressure = data.main.pressure;
 	var desc = data.weather[0].description;
-	$('.temp').append(temp+ " K"); 
+	$('.temp').append(temp+ " C"); 
 	$('.humid').append(humid+ "%");
 	$('.pressure').append(pressure+"hPa");
 	$('.desc').append(desc);
